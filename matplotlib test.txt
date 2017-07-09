@@ -1,0 +1,4 @@
+import matplotlib.pyplot as plt
+Y = [1,4,9,16]
+plt.scatter(range(len(Y)),Y,s=250,color='r')
+plt.savefig('/Users/telliott_admin/Desktop/example.png')
