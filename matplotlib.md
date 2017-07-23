@@ -39,3 +39,4 @@ That's the one that came with Homebrew's Python.
 >>>
 ```
 
+It's strange.  Over the years, I spent many, many hours building matplotlib and scipy and wrestling with how to get `libpng` available and so on, and now, it just works.  I love it.
