@@ -1,5 +1,7 @@
 ### Search for files with Unix `find`
 
+`find` lists all the files in a given file hierarchy.
+
 From the Desktop I construct a small example directory
 
     mkdir x
@@ -9,11 +11,9 @@ From the Desktop I construct a small example directory
     x/y
     >
 
-`find` lists all the files in a given file hierarchy.
-
 #### Combine with `xargs ls` to list the resulting paths
 
-`find` is usually combined with some other command: for example, `xargs` is used to call `ls` on each of the output file paths.
+`find` is usually combined with some other command: for example, `xargs` is used to call `ls` with each of the output file paths.
 
 ```
 > find x | xargs ls -al

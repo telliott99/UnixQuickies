@@ -1,8 +1,10 @@
 ### Unix Quickies
 
-#### command line utilities
+#### command line
 
 - [find](find.md)
+- [grep](grep.md)
+- bash [profile](bash_profile.md)
 
 #### software
 
