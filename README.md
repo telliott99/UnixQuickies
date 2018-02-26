@@ -5,6 +5,7 @@
 - [find](find.md)
 - [grep](grep.md)
 - bash [profile](bash_profile.md)
+- $PATH
 
 #### software
 

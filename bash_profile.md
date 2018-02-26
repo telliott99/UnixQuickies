@@ -12,13 +12,16 @@ My `.bash_profile` has a number of things I haven't thought about in several yea
 
 ```
 > cat ~/.bash_profile 
-export PATH=/usr/local/bin:$HOME/bin:$HOME/Software/go/bin:$PATH
-export RDP_JAR_PATH=$HOME/Software/rdp_classifier/rdp_classifier-2.0.jar
-export BLASTMAT=$HOME/bin/blast/programs/blast-2.2.22/data
 PS1="> "
-alias tm='open -a TextMate'
+
+alias te='open -a TextEdit'
 alias oh='open -a Safari _build/html/index.html'
 alias ts='python typeset/scripts/script.py'
+
+p0=$HOME/bin
+p1=$HOME/Library/Python/2.7/bin
+p2=$HOME/Library/Python/3.6/bin
+export PATH=$p0:$p1:$p2:$PATH
 >
 ```
 
