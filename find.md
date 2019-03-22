@@ -4,12 +4,57 @@
 
 From the Desktop I construct a small example directory
 
-    mkdir x
-    touch x/y
-    > find x
-    x
-    x/y
-    >
+```
+mkdir d && touch d/1
+> find d
+d
+d/1
+>
+```
+
+``find`` is recursive.  Control this with ``maxdepth``.
+
+```
+> mkdir -p x/y/z && touch x/y/z/1.txt
+> find x
+x
+x/y
+x/y/z
+x/y/z/1.txt
+> find x -maxdepth 1
+x
+x/y
+>
+```
+
+Results from ``find`` are not sorted:
+
+```
+> touch a b c
+> find . -maxdepth 1
+.
+./.DS_Store
+./a
+./c
+./d
+./x
+./b
+>
+```
+
+but of course, they <i>can</i> be:
+
+```
+> find . -maxdepth 1 | sort
+.
+./.DS_Store
+./a
+./b
+./c
+./d
+./x
+> 
+```
 
 #### Combine with `xargs ls` to list the resulting paths
 
@@ -121,7 +166,7 @@ Note:  if you don't want to see that error message add `2>/dev/null`
 >
 ```
 
-#### Multiplie targets
+#### Multiple targets
 
 ```
 > find ~/Photos -name "*.jpg" -o -name "*.gif" | head -n 2
@@ -153,4 +198,5 @@ Since the current directory `.` is not preceedied by `/`, it doesn't match.
 
 #### Links
 
-[one](https://danielmiessler.com/study/find/) [two](http://content.hccfl.edu/pollock/Unix/FindCmd.htm)
+- [one](https://danielmiessler.com/study/find/) 
+- [two](http://content.hccfl.edu/pollock/Unix/FindCmd.htm)
